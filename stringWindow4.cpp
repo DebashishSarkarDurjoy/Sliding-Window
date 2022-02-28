@@ -41,7 +41,8 @@ string findWindow(string s, string p) {
         }
     }
 
-    return s.substr(start_idx, min_so_far);
+    if (start_idx == -1) return "no window found";
+    else return s.substr(start_idx, min_so_far);
 }
 
 int main(void) {
